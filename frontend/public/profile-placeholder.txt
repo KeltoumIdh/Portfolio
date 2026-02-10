@@ -1,0 +1,3 @@
+Add your profile photo here as profile.jpg
+So the About section can display your image.
+Supported: JPG, PNG, WebP.

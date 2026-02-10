@@ -1,0 +1,11 @@
+# Python
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Virtual Environment
+backend/venv/
+
+# Secrets
+backend/.env

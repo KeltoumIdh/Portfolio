@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Computer Vision Pipeline for Rust Detection",
+      "description": "Built a real-time rust detection system using YOLOv8 and Flask API. Achieved 94% mAP on custom dataset.",
+      "technologies": ["Python", "PyTorch", "YOLOv8", "OpenCV", "Flask"],
+      "category": "Computer Vision",
+      "github_url": "https://github.com/you/rust-detector"
+    },
+    {
+      "title": "Time Series Forecasting with MLOps",
+      "description": "End-to-end pipeline for energy consumption prediction. Includes Airflow scheduling, MLflow tracking, and FastAPI deployment.",
+      "technologies": ["Python", "FastAPI", "Airflow", "MLflow", "Prophet"],
+      "category": "MLOps",
+      "github_url": "https://github.com/you/energy-forecast"
+    }
+  ]
