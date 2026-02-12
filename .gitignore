@@ -9,3 +9,26 @@ backend/venv/
 
 # Secrets
 backend/.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Backend (Python)
+backend/.venv/
+backend/.env.*
+backend/__pycache__/
+backend/**/*.pyc
+backend/.pytest_cache/
+backend/.ruff_cache/
+
+# Vector indexes / generated assets
+backend/faiss_index*/
+
+# OS / tooling
+.DS_Store
+Thumbs.db
