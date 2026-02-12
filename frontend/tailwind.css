@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* App-wide quality-of-life defaults */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  /* Better focus visibility */
+  :focus-visible {
+    outline: 2px solid rgba(232, 180, 188, 0.9);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Portrait harmonizer: warms cool backgrounds, matches plum/pink theme */
+  .img-harmonize {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate; /* keep blend effects inside */
+  }
+
+  /* Warm + plum overlay */
+  .img-harmonize::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    mix-blend-mode: soft-light;
+    background:
+      radial-gradient(80% 70% at 20% 20%, rgba(232, 180, 188, 0.55) 0%, transparent 55%),
+      radial-gradient(70% 70% at 80% 30%, rgba(201, 160, 160, 0.35) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(232, 180, 188, 0.25) 0%, rgba(201, 184, 208, 0.18) 35%, rgba(15, 12, 13, 0.0) 70%);
+  }
+
+  /* Very subtle grain/dot noise to match starry vibe */
+  .img-harmonize::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Gentle warming filter on the image itself (keeps skin natural) */
+  .img-harmonize-img {
+    filter: sepia(0.12) saturate(1.04) hue-rotate(-7deg) contrast(1.03);
+  }
+}
+
