@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./Container";
-import SectionHeading from "./SectionHeading";
+import Container from "./ui/Container";
+import SectionHeading from "./ui/SectionHeading";
 
 function ContactRow({ href, title, value, icon, external }) {
   return (

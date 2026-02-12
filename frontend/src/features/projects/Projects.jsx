@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Container from "./components/Container";
-import SectionHeading from "./components/SectionHeading";
+import Container from "../../components/ui/Container";
+import SectionHeading from "../../components/ui/SectionHeading";
 
 function ExternalLinkIcon(props) {
   return (

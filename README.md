@@ -153,5 +153,13 @@ For local development you can leave this unset; the app uses `http://localhost:8
 
 ## Project layout
 
-- **backend/** – FastAPI app, RAG pipeline (LangChain + FAISS + OpenAI), `data/projects.json`.
-- **frontend/** – React app (Vite), `Chatbot.jsx` talks to `POST /chat` on the backend.
+- **backend/** – FastAPI app + RAG pipeline (LangChain + FAISS). Source code lives in `backend/src/`.
+  - Entrypoint: `backend/app.py`
+  - Data: `backend/data/projects.json`
+- **frontend/** – React app (Vite) with Tailwind build pipeline. Source code lives in `frontend/src/`.
+  - Entrypoint: `frontend/src/main.jsx`
+  - Styles: `frontend/src/styles/`
+  - Features: `frontend/src/features/`
+  - Components: `frontend/src/components/`
+
+See `docs/STRUCTURE.md` for the detailed architecture.
