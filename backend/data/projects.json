@@ -1,16 +1,62 @@
 [
-    {
-      "title": "Computer Vision Pipeline for Rust Detection",
-      "description": "Built a real-time rust detection system using YOLOv8 and Flask API. Achieved 94% mAP on custom dataset.",
-      "technologies": ["Python", "PyTorch", "YOLOv8", "OpenCV", "Flask"],
-      "category": "Computer Vision",
-      "github_url": "https://github.com/you/rust-detector"
-    },
-    {
-      "title": "Time Series Forecasting with MLOps",
-      "description": "End-to-end pipeline for energy consumption prediction. Includes Airflow scheduling, MLflow tracking, and FastAPI deployment.",
-      "technologies": ["Python", "FastAPI", "Airflow", "MLflow", "Prophet"],
-      "category": "MLOps",
-      "github_url": "https://github.com/you/energy-forecast"
-    }
-  ]
+  {
+    "title": "Computer Vision Pipeline for Rust Detection",
+    "summary": "Real-time industrial rust detection system using deep learning.",
+    "description": "Designed and deployed a real-time rust detection pipeline using YOLOv8. Built a custom dataset, optimized model performance, and exposed inference via Flask API for industrial usage.",
+    "challenges": [
+      "Building and labeling a high-quality custom dataset",
+      "Balancing model accuracy and inference speed",
+      "Deploying real-time detection pipeline"
+    ],
+    "technologies": ["Python", "PyTorch", "YOLOv8", "OpenCV", "Flask"],
+    "category": "Computer Vision",
+    "type": "AI Project",
+    "impact": "Achieved 94% mAP on custom dataset with real-time performance.",
+    "github_url": "https://github.com/you/rust-detector"
+  },
+  {
+    "title": "Time Series Forecasting with MLOps",
+    "summary": "End-to-end ML pipeline for energy consumption prediction.",
+    "description": "Built a full ML pipeline for forecasting energy consumption. Integrated Airflow scheduling, MLflow tracking, and deployed model using FastAPI for scalable prediction services.",
+    "challenges": [
+      "Data preprocessing and feature engineering",
+      "Experiment tracking and reproducibility",
+      "Deployment automation with MLOps tools"
+    ],
+    "technologies": ["Python", "FastAPI", "Airflow", "MLflow", "Prophet"],
+    "category": "MLOps",
+    "type": "AI Project",
+    "impact": "Delivered automated prediction workflow with monitoring and reproducibility.",
+    "github_url": "https://github.com/you/energy-forecast"
+  },
+  {
+    "title": "Collaborative E-Vote Web Application",
+    "summary": "Secure collaborative voting platform (Final Year Project).",
+    "description": "Developed a full-stack e-voting application enabling secure user authentication, voting management, and real-time results display.",
+    "technologies": ["React.js", "Laravel", "MySQL"],
+    "category": "Full-Stack",
+    "type": "Academic Project",
+    "impact": "Built secure authentication and database-driven voting logic.",
+    "github_url": ""
+  },
+  {
+    "title": "Full-Stack E-Commerce Platform",
+    "summary": "Complete e-commerce website with admin and product management.",
+    "description": "Created a full-stack e-commerce system including product catalog, authentication, and admin dashboard using Laravel and Bootstrap.",
+    "technologies": ["Laravel", "Bootstrap", "MySQL"],
+    "category": "Full-Stack",
+    "type": "Academic Project",
+    "impact": "Implemented CRUD operations, authentication, and database integration.",
+    "github_url": ""
+  },
+  {
+    "title": "Agentic AI Conversational System",
+    "summary": "Conversational AI with reasoning and task execution capabilities.",
+    "description": "Built an AI conversational system capable of multi-step reasoning and contextual dialogue using LLM integration techniques.",
+    "technologies": ["Python", "LLMs", "FastAPI"],
+    "category": "Generative AI",
+    "type": "AI Project",
+    "impact": "Demonstrated multi-step reasoning and conversational memory.",
+    "github_url": ""
+  }
+]

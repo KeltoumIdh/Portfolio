@@ -163,3 +163,14 @@ For local development you can leave this unset; the app uses `http://localhost:8
   - Components: `frontend/src/components/`
 
 See `docs/STRUCTURE.md` for the detailed architecture.
+
+---
+
+## Deploy (production)
+
+To push your code and deploy the site and API online, see **[docs/DEPLOY.md](docs/DEPLOY.md)**. It covers:
+
+- Pushing changes with Git
+- Deploying the frontend (e.g. Vercel, Netlify)
+- Deploying the backend (e.g. Render, Railway)
+- Setting `VITE_API_URL` and `CORS_ORIGINS` so the chatbot works in production
