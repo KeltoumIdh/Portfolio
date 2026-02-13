@@ -48,6 +48,8 @@ git push origin main
 
 The backend needs **Python 3.9–3.12**, env vars (e.g. `GROQ_API_KEY`), and to run `python app.py` (or `uvicorn`). It also reads `backend/data/projects.json` and can write `backend/faiss_index_free/` (allow writable filesystem or prebuild index).
 
+**Why we avoid tiktoken on Render (free tier):** The default `requirements.txt` does **not** include `openai` or `langchain-openai`. Those packages pull in **tiktoken**, which often fails to build on Render’s free tier (Rust/build tooling). The app is set up to use **Groq only** by default; set `GROQ_API_KEY` in the backend env. If you add `openai` and `langchain-openai` for OpenAI support, installs may fail on Render; use Groq for a reliable free deploy.
+
 ### Option A – Render (free tier)
 
 1. Go to [render.com](https://render.com) → **New** → **Web Service**.

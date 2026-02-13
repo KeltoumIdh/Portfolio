@@ -1,4 +1,5 @@
-# Requires Python 3.9–3.12 (not 3.14). Use: py -3.12 -m venv venv && venv\Scripts\activate
+gi# Requires Python 3.9–3.12 (not 3.14). Use: py -3.12 -m venv venv && venv\Scripts\activate
+# Minimal stack for FastAPI + Groq chatbot. No openai/langchain-openai (they pull tiktoken, which fails to build on Render free tier).
 fastapi>=0.104.1
 uvicorn[standard]>=0.24.0
 python-dotenv>=1.0.0
@@ -7,5 +8,3 @@ faiss-cpu>=1.7.4
 pydantic>=2.5.0,<3
 groq>=0.4.0
 sentence-transformers>=2.2.0
-openai>=1.3.0
-langchain-openai==0.0.2

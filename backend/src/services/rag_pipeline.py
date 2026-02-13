@@ -301,7 +301,13 @@ def create_rag_system():
     if groq:
         return _create_rag_with_free_apis()
     if openai_key:
-        return _create_rag_with_openai()
+        try:
+            return _create_rag_with_openai()
+        except ImportError as e:
+            raise RuntimeError(
+                "OpenAI support is not installed (avoids tiktoken, which fails on Render). "
+                "Use GROQ_API_KEY for deploy. For local OpenAI: pip install openai langchain-openai"
+            ) from e
     if hf:
         raise RuntimeError(
             "HUGGINGFACEHUB_API_TOKEN is set, but no chat model key was found. "
