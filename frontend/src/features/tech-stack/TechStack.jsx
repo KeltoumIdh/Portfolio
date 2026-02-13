@@ -43,7 +43,7 @@ function TechCard({ item, index, isVisible }) {
         "tech-card group relative flex flex-col items-center justify-center",
         "rounded-xl border border-white/10 bg-white/4 backdrop-blur-xl",
         "shadow-[0_8px_28px_rgba(0,0,0,0.35)]",
-        "px-2 py-2",
+        "px-2 py-2 md:w-24",
         "transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/6 hover:border-white/15",
         "min-h-14",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
