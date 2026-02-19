@@ -18,7 +18,7 @@ export default function Hero({ profile, onPrimary, onSecondary }) {
             <div className="flex flex-wrap gap-2">
               <Pill>AI & Intelligent Systems</Pill>
               <Pill>Full‑Stack Engineering</Pill>
-              <Pill>GenAI • ML • DL</Pill>
+              <Pill>GenAI • ML • DL • LLM</Pill>
             </div>
 
             <div className="space-y-4">
@@ -34,7 +34,7 @@ export default function Hero({ profile, onPrimary, onSecondary }) {
                 {profile.tagline}
               </p>
               <p className="max-w-xl text-pretty text-base leading-relaxed text-white/65">
-                Bridging robust software engineering with intelligent systems — from UI/UX
+                Bridging robust software engineering with intelligent systems from UI/UX
                 to ML & GenAI. I build calm, premium interfaces with production-grade
                 foundations.
               </p>

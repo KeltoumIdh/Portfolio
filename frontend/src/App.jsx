@@ -1,6 +1,8 @@
-import React, { useMemo, useState, useEffect } from "react";
-import Chatbot from "./components/chatbot/Chatbot";
+import React, { useMemo, useState, useEffect, lazy, Suspense } from "react";
+import ChatbotDisabled from "./components/chatbot/ChatbotDisabled";
 import AnimatedCursor from "./components/cursor/AnimatedCursor";
+
+const Chatbot = lazy(() => import("./components/chatbot/Chatbot"));
 import SpaceBackground from "./components/background/SpaceBackground";
 import SocialSidebar from "./components/sidebars/SocialSidebar";
 import InsightsSidebar from "./components/sidebars/InsightsSidebar";
@@ -12,12 +14,14 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
 const NAV = [
   { id: "home", label: "Home" },
   { id: "insights", label: "Insights" },
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
@@ -35,8 +39,8 @@ const PROFILE = {
   name: "Keltoum Idhssou",
   tagline: "Junior AI & Intelligent Systems Engineer | Full-Stack Developer",
   about: [
-    "I'm a dynamic Full-Stack Developer with a strong foundation in modern web technologies (React, Node.js, Laravel), currently specializing in Machine Learning, Deep Learning, and Applied AI.",
-    "I'm experienced in end-to-end project development, from UI/UX design in Figma to backend deployment. I've completed hands-on AI training with mini-projects in Computer Vision, ML, DL, and Agentic AI, and I'm actively building expertise in Generative AI and LLM-based solutions.",
+    "Full-stack developer with a strong foundation in React, Node.js, and Laravel, and a focus on Machine Learning, Deep Learning, and Applied AI.",
+    "I work across the stack—from UI/UX in Figma to backend deployment—and I'm building hands-on experience in GenAI, LLMs, and Agentic AI alongside classical ML/DL.",
   ],
   contact: {
     email: "keltoumidhssou1710@gmail.com",
@@ -46,13 +50,34 @@ const PROFILE = {
   },
 };
 
+const EXPERIENCE = [
+  {
+    role: "Freelance Full-Stack Developer",
+    period: "2024–2025",
+    company: "Freelance",
+    description: "React/Next/Laravel, Node integrations, UI/UX in Figma. Collaborated with Wenaya.",
+  },
+  {
+    role: "Full-Stack Developer",
+    period: "Jul 2023 – Jun 2024",
+    company: "Wenaya",
+    description: "React/Tailwind, Laravel/PostgreSQL, UI performance optimization.",
+  },
+  {
+    role: "Web Dev Intern",
+    period: "2023 (1 month)",
+    company: "Sofimed Maroc",
+    description: "WordPress e-commerce site.",
+  },
+];
+
 const SKILLS = [
   { name: "React & JavaScript", level: 90 },
   { name: "Python & OOP", level: 88 },
-  { name: "Machine Learning", level: 85 },
-  { name: "Deep Learning", level: 82 },
+  { name: "Machine Learning (scikit-learn)", level: 85 },
+  { name: "Deep Learning (neural nets)", level: 82 },
   { name: "Laravel & Node.js", level: 88 },
-  { name: "Data Science & Visualization", level: 80 },
+  { name: "Data preprocessing & visualization", level: 80 },
   { name: "Figma & UI/UX", level: 85 },
   { name: "Git & Agile", level: 90 },
 ];
@@ -115,7 +140,7 @@ function App() {
       },
       { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
     );
-    ["home", "insights", "about", "skills", "projects", "contact"].forEach(
+    ["home", "insights", "about", "experience", "skills", "projects", "contact"].forEach(
       (id) => {
         const el = document.getElementById(id);
         if (el) obs.observe(el);
@@ -161,6 +186,7 @@ function App() {
           />
           <Stats items={INSIGHTS} />
           <About paragraphs={PROFILE.about} />
+          <Experience items={EXPERIENCE} />
           <TechStack />
           <Projects />
           <Contact contact={PROFILE.contact} />
@@ -173,11 +199,17 @@ function App() {
         </main>
       </div>
 
-      <Chatbot
-        isOpen={chatOpen}
-        onClose={() => setChatOpen(false)}
-        onOpen={() => setChatOpen(true)}
-      />
+      {import.meta.env.PROD ? (
+        <ChatbotDisabled />
+      ) : (
+        <Suspense fallback={null}>
+          <Chatbot
+            isOpen={chatOpen}
+            onClose={() => setChatOpen(false)}
+            onOpen={() => setChatOpen(true)}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

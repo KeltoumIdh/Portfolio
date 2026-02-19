@@ -9,6 +9,7 @@ const TECH_CATEGORIES = [
       { name: "JavaScript", color: "#F7DF1E", icon: <JavaScriptIcon /> },
       { name: "PHP", color: "#777BB4", icon: <PhpIcon /> },
       { name: "React", color: "#61DAFB", icon: <ReactIcon /> },
+      { name: "Redux", color: "#764ABC", icon: <ReduxIcon /> },
       { name: "Next.js", color: "#ffffff", icon: <NextJsIcon /> },
       { name: "HTML", color: "#E34F26", icon: <HtmlIcon /> },
       { name: "CSS", color: "#1572B6", icon: <CssIcon /> },
@@ -27,6 +28,7 @@ const TECH_CATEGORIES = [
       { name: "Git", color: "#F05032", icon: <GitIcon /> },
       { name: "GitHub", color: "#ffffff", icon: <GitHubIcon /> },
       { name: "Docker", color: "#2496ED", icon: <DockerIcon /> },
+      { name: "PostgreSQL", color: "#336791", icon: <PostgreSQLIcon /> },
       { name: "MySQL", color: "#4479A1", icon: <MySQLIcon /> },
       { name: "MongoDB", color: "#47A248", icon: <MongoDBIcon /> },
       { name: "Firebase", color: "#FFCA28", icon: <FirebaseIcon /> },
@@ -146,7 +148,7 @@ export default function TechStack() {
               title="Tech"
               accent="Stack"
               align="center"
-              description="A compact snapshot of the tools I use to build products—from UI to ML."
+              description="Frontend: React, Next, Redux, Tailwind, Bootstrap, JS. Backend: Node, Laravel, Flask, PostgreSQL/MySQL/MongoDB. AI: Python, ML, DL, NLP/LLMs/GenAI/Agentic AI."
             />
           </div>
 
@@ -404,6 +406,20 @@ function FigmaIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
       <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 00-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h.098c1.665 0 3.019-1.355 3.019-3.02s-1.354-3.019-3.019-3.019h-.098z" />
+    </svg>
+  );
+}
+function ReduxIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+      <path d="M16.6 18.6c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6 1.6.7 1.6 1.6-.7 1.6-1.6 1.6zM5.8 20.2c-.4 0-.8-.2-1-.6l-.6-1.2c-.2-.4-.1-.8.2-1.1.3-.3.7-.4 1.1-.2l1.2.6c.4.2.6.6.6 1s-.2.8-.6 1c-.2.2-.5.3-.9.3zm-2.2-5.8c-.5 0-.9-.3-1-.8l-.3-1.3c-.1-.5.2-1 .6-1.2.5-.2 1-.1 1.3.3l.8 1.1c.3.4.3.9 0 1.3-.3.3-.7.5-1.1.5l-.3.1zm16.8-2.4c-.5 0-1-.3-1.2-.8l-.6-1.2c-.2-.4-.1-.9.2-1.2.4-.3.9-.3 1.2.2l.6 1.2c.2.5.1 1-.2 1.3-.3.3-.6.5-1 .5zm2.2-5.8c-.4 0-.8-.2-1-.6l-.8-1.1c-.3-.4-.2-.9.2-1.3.4-.3.9-.3 1.3.1l.8 1.1c.3.4.2.9-.2 1.2-.2.2-.5.3-.9.3z" />
+    </svg>
+  );
+}
+function PostgreSQLIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+      <path d="M9.7 15.5h-.2c-.2 0-.3 0-.4-.1l-.1-.1v-2.2c0-.1 0-.2.1-.3.1 0 .2-.1.3-.1h.2c.2 0 .3 0 .4.1.1.1.1.2.1.3v2.2c0 .1 0 .2-.1.3 0 .1-.2.1-.4.1zm-2.5-2.4c-.1 0-.2 0-.3.1-.1.1-.1.2-.1.3v1.5c0 .1 0 .2.1.3.1.1.2.1.3.1h.2c.2 0 .3 0 .4-.1.1-.1.1-.2.1-.3v-1.5c0-.1 0-.2-.1-.3-.1-.1-.2-.1-.4-.1h-.2zm4.6-2.2c-2.4 0-4.3 1.9-4.3 4.3s1.9 4.3 4.3 4.3 4.3-1.9 4.3-4.3-1.9-4.3-4.3-4.3zm0 7.5c-1.8 0-3.2-1.4-3.2-3.2s1.4-3.2 3.2-3.2 3.2 1.4 3.2 3.2-1.4 3.2-3.2 3.2z" />
     </svg>
   );
 }

@@ -12,7 +12,7 @@ export default function About({ paragraphs }) {
               kicker="01. ABOUT"
               title="About"
               accent="Me"
-              description="A short snapshot of how I build: thoughtful UX + reliable engineering + intelligent systems."
+              description="Full-stack (React/Node/Laravel) + ML/DL/Applied AI + GenAI/LLM + Agentic AI."
             />
 
             <div className="space-y-5 text-base leading-relaxed text-white/70">
